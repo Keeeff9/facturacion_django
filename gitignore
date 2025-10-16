@@ -1,0 +1,48 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.log
+*.sqlite3
+*.db
+
+# === Entorno virtual ===
+venv/
+env/
+ENV/
+.venv/
+
+# === Django ===
+*.pot
+*.pyc
+*.pyo
+*.mo
+*.log
+db.sqlite3
+media/
+staticfiles/
+*.bak
+local_settings.py
+
+# === IDEs y editores ===
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# === Sistema operativo ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === Git ===
+*.orig
+*.rej
+
+# === Archivos temporales ===
+*.swp
+*.tmp
+*.temp
+~$*
