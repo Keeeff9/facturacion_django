@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Factura #{{ factura.id }}</h1>
+<p>Cliente: {{ factura.cliente.nombre }}</p>
+<p>Fecha: {{ factura.fecha }}</p>
+<table>
+  <thead><tr><th>Producto</th><th>Cantidad</th><th>Subtotal</th></tr></thead>
+  <tbody>
+  {% for l in factura.lineas.all %}
+    <tr>
+      <td>{{ l.producto.nombre }}</td>
+      <td>{{ l.cantidad }}</td>
+      <td>{{ l.subtotal }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+<p>Total: {{ factura.total }}</p>
+<a href="{% url 'lista_facturas' %}">Volver</a>
+{% endblock %}
